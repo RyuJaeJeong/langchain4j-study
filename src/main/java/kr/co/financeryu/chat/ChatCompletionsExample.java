@@ -1,8 +1,12 @@
 package kr.co.financeryu.chat;
 
 import dev.langchain4j.data.message.ChatMessage;
+import dev.langchain4j.model.StreamingResponseHandler;
 import dev.langchain4j.model.chat.ChatModel;
+import dev.langchain4j.model.chat.response.ChatResponse;
+import dev.langchain4j.model.chat.response.StreamingChatResponseHandler;
 import dev.langchain4j.model.openai.OpenAiChatModel;
+import dev.langchain4j.model.openai.OpenAiStreamingChatModel;
 import io.github.cdimascio.dotenv.Dotenv;
 
 import java.util.List;
@@ -37,6 +41,11 @@ public class ChatCompletionsExample {
         return model.chat(query);
     }
 
+    /**
+     * LLM에서 답변을 반환 합니다.
+     * @param messages 배열 형태의 대화 이력
+     * @return 답변
+     */
     public String chat(List<ChatMessage> messages){
         return model.chat(messages).aiMessage().text();
     }

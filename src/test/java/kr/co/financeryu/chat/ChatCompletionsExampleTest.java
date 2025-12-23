@@ -3,53 +3,39 @@ package kr.co.financeryu.chat;
 import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.data.message.ChatMessage;
 import dev.langchain4j.data.message.UserMessage;
-import dev.langchain4j.model.chat.ChatModel;
-import dev.langchain4j.model.chat.response.ChatResponse;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-class ChatCompletionsExampleTest {
+public class ChatCompletionsExampleTest {
 
     @Test
     void chat() {
-        ChatModel fake = new ChatModel() {
-            @Override
-            public String chat(String userMessage) {
-                return "Answer about " + userMessage;
-            }
-
-            @Override
-            public ChatResponse chat(List<ChatMessage> messages) {
-                return ChatResponse.builder()
-                        .aiMessage(new AiMessage("Answer"))
-                        .build();
-            }
-        };
-
-        // given
+        //given
         String query = "안녕?";
 
-        ChatCompletionsExample model = new ChatCompletionsExample(fake);
-        // when
+        ChatCompletionsExample model = new ChatCompletionsExample();
+        //when
         String answer = model.chat(query);
 
-        // then
-        System.out.println("answer1: " + answer);
-        assertEquals(answer, "Answer about " + query);
+        //then
+        System.out.println("answer: " + answer);
+        assertNotNull(answer);
 
-        // given
+        //given
         List<ChatMessage> list = new ArrayList<>();
-        list.add(new UserMessage("hello"));
+        list.add(new UserMessage("내 이름은 류재정이야"));
+        list.add(new AiMessage("안녕하세요 재정님, 무엇이 궁금하신가요?"));
+        list.add(new UserMessage("내 이름이 뭐라고?"));
 
         //when
         answer = model.chat(list);
 
-        // then
-        System.out.println("answer2: " + answer);
-        assertEquals(answer, "Answer");
+        //then
+        System.out.println("answer: " + answer);
+        assertNotNull(answer);
     }
 }
