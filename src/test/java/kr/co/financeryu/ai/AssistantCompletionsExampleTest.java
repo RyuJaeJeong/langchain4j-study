@@ -1,4 +1,4 @@
-package kr.co.financeryu.AIService;
+package kr.co.financeryu.ai;
 
 import org.junit.jupiter.api.Test;
 

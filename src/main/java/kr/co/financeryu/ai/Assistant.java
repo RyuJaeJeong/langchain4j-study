@@ -1,6 +1,5 @@
-package kr.co.financeryu.AIService;
+package kr.co.financeryu.ai;
 
-import dev.langchain4j.service.MemoryId;
 import dev.langchain4j.service.TokenStream;
 import dev.langchain4j.service.UserMessage;
 

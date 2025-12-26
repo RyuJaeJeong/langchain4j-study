@@ -1,4 +1,4 @@
-package kr.co.financeryu.AIService;
+package kr.co.financeryu.ai;
 
 import dev.langchain4j.model.openai.OpenAiStreamingChatModel;
 import dev.langchain4j.service.AiServices;

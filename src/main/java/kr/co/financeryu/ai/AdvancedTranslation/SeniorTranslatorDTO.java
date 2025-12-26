@@ -1,4 +1,4 @@
-package kr.co.financeryu.AIService.AdvancedTranslation;
+package kr.co.financeryu.ai.AdvancedTranslation;
 
 public class SeniorTranslatorDTO {
 

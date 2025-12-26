@@ -1,7 +1,6 @@
-package kr.co.financeryu.AIService;
+package kr.co.financeryu.ai;
 
 import dev.langchain4j.model.chat.response.ChatResponse;
-import dev.langchain4j.model.chat.response.PartialThinking;
 import dev.langchain4j.service.TokenStream;
 import org.junit.jupiter.api.Test;
 

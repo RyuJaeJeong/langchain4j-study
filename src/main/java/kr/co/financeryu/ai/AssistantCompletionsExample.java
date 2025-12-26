@@ -1,10 +1,8 @@
-package kr.co.financeryu.AIService;
+package kr.co.financeryu.ai;
 
 import dev.langchain4j.model.openai.OpenAiChatModel;
 import dev.langchain4j.service.AiServices;
 import io.github.cdimascio.dotenv.Dotenv;
-
-import java.util.Scanner;
 
 public class AssistantCompletionsExample {
 

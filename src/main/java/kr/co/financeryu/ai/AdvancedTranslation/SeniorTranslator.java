@@ -1,4 +1,4 @@
-package kr.co.financeryu.AIService.AdvancedTranslation;
+package kr.co.financeryu.ai.AdvancedTranslation;
 
 import dev.langchain4j.service.Result;
 import dev.langchain4j.service.UserMessage;
