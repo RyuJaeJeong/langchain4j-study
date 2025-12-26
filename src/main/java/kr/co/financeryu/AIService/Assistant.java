@@ -6,5 +6,5 @@ import dev.langchain4j.service.UserMessage;
 
 public interface Assistant {
     String chat(String userMessage);
-    TokenStream stream(@MemoryId String memoryId,  @UserMessage String message);
+    TokenStream stream(@UserMessage String message);
 }
